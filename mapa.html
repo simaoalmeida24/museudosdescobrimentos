@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mapa</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<audio id="audioPlayer" loop>
+    <source src="images/musicamenu.mp3" type="audio/mp3">
+    Seu navegador não suporta o elemento de áudio.
+</audio>
+
+<div class="container fundo">
+
+    <div class="container py-5">
+        <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
+            <h1 class="mb-4">Mapa</h1>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
+                <div class="case-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="images/caravela2.png" alt="">
+                    <a href="caravela.html" class="case-overlay text-decoration-none" href="">
+                        <h5 class="lh-base text-white mb-3">Caravela
+                        </h5>
+                        <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.5s">
+                <div class="case-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="images/castelo3d.jpg" alt="">
+                    <a class="case-overlay text-decoration-none" href="">
+                        <h5 class="lh-base text-white mb-3">Castelo
+                        </h5>
+                        <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 wow fadeIn" data-wow-delay="0.7s">
+                <div class="case-item position-relative overflow-hidden rounded mb-2">
+                    <img class="img-fluid" src="images/brasil2.jpg" alt="">
+                    <a class="case-overlay text-decoration-none" href="">
+                        <h5 class="lh-base text-white mb-3">Brasil
+                        </h5>
+                        <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function iniciarMusica() {
+        // Abre a outra página com a música
+        window.open('menu.html', '_blank');
+    }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var audioPlayer = document.getElementById('audioPlayer');
+
+        // Inicia a reprodução automática quando a página é carregada
+        audioPlayer.play();
+    });
+</script>

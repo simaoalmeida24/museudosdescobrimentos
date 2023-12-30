@@ -1,0 +1,122 @@
+<html>
+
+<head>
+  <title>Caravela</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <!-- ######## Componente de gestão de eventos ######## -->
+  <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var objetosClicados = 0;
+
+      function verificarObjetosClicados() {
+        if (objetosClicados === 5) {
+          mudarDeSala();
+        }
+      }
+
+      function mudarDeSala() {
+        console.log('Mudar de sala!');
+        // Adicione a lógica para mudar para a próxima sala
+        // Exemplo: window.location.href = 'url_da_proxima_sala.html';
+        window.location.href = 'coletaveis.html';
+      }
+
+      // Adicione um ouvinte de eventos de clique apenas aos objetos com a classe 'objetoClicavel'
+      var objetos = document.querySelectorAll('.objetoClicavel');
+      objetos.forEach(function (objeto) {
+        objeto.addEventListener('click', function () {
+          objeto.object3D.visible = false;
+          objetosClicados++;
+          verificarObjetosClicados();
+        });
+      });
+
+      // Corrija o seletor do botão
+      var botaoMudarSala = document.getElementById('botaoMudarSala');
+      if (botaoMudarSala) {
+        botaoMudarSala.addEventListener('click', mudarDeSala);
+      }
+    });
+  </script>
+
+<body>
+  <a-scene stats>
+    <a-assets>
+      <!-- Adicionei um novo asset para a próxima sala -->
+      <a-asset-item id="astrolabio" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/astrolabio.glb"></a-asset-item>
+      <a-asset-item id="bandeira" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bandeira.glb"></a-asset-item>
+      <a-asset-item id="bussola" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bussola.glb"></a-asset-item>
+      <a-asset-item id="mapa" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/mapa3.glb"></a-asset-item>
+      <a-asset-item id="quadro" src="https://link.storjshare.io/s/jwyadsa6jm3jl4d2sapevz3ml3bq/3d-bucket/quadroh.glb"></a-asset-item>
+      <a-asset-item id="cofre" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/cofre6.glb"></a-asset-item>
+      <a-asset-item id="nau" src="https://link.storjshare.io/raw/jvpanm63reqxylhqft5cmop2nmyq/3d-bucket/NAU7.glb"></a-asset-item>
+      <a-asset-item id="candeeiro" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/lanternaanimada.glb"></a-asset-item>
+    </a-assets>
+
+    <!-- Using the asset management system. -->
+    <a-gltf-model class="objetoClicavel" src="#astrolabio" event-set__ResetVisibilidade="_event: click; visible: false"
+      gltf-model="#astrolabio" position="-17.99532 0.30933 21.5967" scale="0.57178 0.57178 0.57178"
+      rotation="72.72782476713591 116.08354112468531 -16.365966460116834"></a-gltf-model>
+    <a-gltf-model class="objetoClicavel" src="#bandeira"
+      event-set__ResetVisibilidade="_event: click; visible: false"></a-gltf-model>
+    <a-gltf-model class="objetoClicavel" src="#bussola"
+      event-set__ResetVisibilidade="_event: click; visible: false"></a-gltf-model>
+    <a-gltf-model class="objetoClicavel" src="#mapa"
+      event-set__ResetVisibilidade="_event: click; visible: false"></a-gltf-model>
+    <a-gltf-model class="objetoClicavel" src="#quadro"
+      event-set__ResetVisibilidade="_event: click; visible: false"></a-gltf-model>
+    <a-gltf-model src="#cofre"></a-gltf-model>
+    <a-gltf-model src="#nau"></a-gltf-model>
+    <a-entity gltf-model="#candeeiro" position="53.25544 2.33364 9.46375" animation-mixer></a-entity>
+    <a-gltf-model src="#candeeiro" position="53.25544 2.33364 9.46375"></a-gltf-model>
+
+    <a-entity
+      light="type: point; intensity: 1.72; distance: 16.21; decay: 4; color: #bd9051; penumbra: 1; shadowBias: 0.98"
+      position="23.13352 9.21092 25.38184" rotation="-15.208 -141.77200000000002 -130.095" scale="-2.64 1 1"
+      id="luzcandeeiro2"></a-entity>
+    <a-entity light="type: point; color: #bd9051; decay: 3; distance: 25" position="0 1.81482 13.71999"
+      id="luz"></a-entity>
+    <a-entity
+      light="type: point; intensity: 1.20; distance: 1.6; decay: 1.56; color: #bd9051; penumbra: 1; shadowBias: 2.55"
+      position="0.08849 11.07256 29.42823" rotation="-15.208 -141.77200000000002 -130.095" scale="-2.64 1 1"
+      id="luzquadro"></a-entity>
+    <a-entity
+      light="type: point; intensity: 1.2; distance: 2.75; decay: 5.88; color: #bd9051; penumbra: 1; shadowBias: 0.98"
+      position="-11.049 5.76146 25.637" rotation="-15.208 -141.77200000000002 -130.095" scale="-2.64 1 1"
+      id="luzmapa"></a-entity>
+    <a-entity
+      light="type: point; intensity: 1.72; distance: 2.51; decay: 2.25; color: #bd9051; penumbra: 1; shadowBias: 0.98"
+      position="16.33197 0.41802 5.38922" rotation="-15.208 -141.77200000000002 -130.095" scale="-2.64 1 1"
+      id="luzbandeira"></a-entity>
+    <a-entity
+      light="type: point; intensity: 1.72; distance: 2.51; decay: 2.25; color: #bd9051; penumbra: 1; shadowBias: 0.98"
+      position="2.61616 2.47544 -0.68817" rotation="-15.208 -141.77200000000002 -130.095" scale="-2.64 1 1"
+      id="luzbussola"></a-entity>
+    <a-entity
+      light="type: point; intensity: 1.72; distance: 2.51; decay: 2.25; color: #bd9051; penumbra: 1; shadowBias: 0.98"
+      position="-18.30007 0.08381 21.51238" rotation="-15.208 -141.77200000000002 -130.095" scale="-2.64 1 1"
+      id="luzastrolabio"></a-entity>
+    <a-entity
+      light="type: point; intensity: 1.72; distance: 16.21; decay: 2.25; color: #bd9051; penumbra: 1; shadowBias: 0.98"
+      position="-26.74389 8.30646 17.26315" rotation="-15.208018756157442 -141.77210386937577 -130.09522400460958"
+      scale="-2.64 1 1" id="luzcandeeiro"></a-entity>
+    <a-entity light="type: spot; angle: 25; distance: 14; intensity: 3; penumbra: 1; decay: 1.43" rotation="-90 0 0"
+      position="0 8.943 13.75352" scale="" id="luzspot"></a-entity>
+    <a-entity light="type: ambient; color: #CCC; intensity: 0.015; distance: 1; penumbra: 1"></a-entity>
+
+
+    <a-camera camera="" position="0 8.94329 13.75352" rotation="2.521 42.972 0" look-controls="" wasd-controls=""
+      data-aframe-inspector-original-camera="">
+      <!-- Representação visual do Cursor -->
+      <a-entity cursor="" position="0 0 -1" geometry="primitive: sphere; radius: 0.005"
+        material="color: window; shader: flat; opacity: 0.5" raycaster="">
+      </a-entity>
+    </a-camera>
+
+  </a-scene>
+</body>
+
+
+</html>

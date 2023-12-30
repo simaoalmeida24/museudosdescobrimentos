@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Museu dos Descobrimentos</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<body class="is-preload">
+
+	<div id="wrapper">
+
+		<audio id="audioPlayer" loop>
+			<source src="images/musicamenu.mp3" type="audio/mp3">
+			Seu navegador não suporta o elemento de áudio.
+		</audio>
+
+		<!-- texto -->
+		<header id="header">
+			<div class="content">
+				<div class="inner">
+					<h1>Museu dos Descobrimentos</h1>
+					<p>Explore as grandiosas aventuras dos navegadores portugueses, onde a
+						história ganha vida através da imersão tecnológica. Embarque numa jornada interativa e
+						envolvente, proporcionando uma experiência única que desafia os limites do tempo
+						e do espaço.</p>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="mapa.html">Mapa</a></li>
+					<li><a href="coletaveis.html">Exposição</a></li>
+					<li><a href="#help">Instruções</a></li>
+					<li><a href="#sinopse">Sinopse</a></li>
+					<li><a href="https://www.esmad.ipp.pt/">Sair</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Instruções -->
+			<article id="help">
+				<h2 class="major">Vamos descobrir?</h2>
+				<span class="image main"><img src="images/nau.jpg" alt="" /></span>
+				<p>Nesta museu podes navegar pelas diversas salas da nossa exposição. Para isso basta ir ao mapa e
+					escolher uma.
+					Dentro de cada sala tens de procurar os coletáveis, que vão aparecer na tua coleção. Lá podes
+					analisar cada
+					um detalhadamente.
+				</p>
+			</article>
+
+			<!-- Sinopse -->
+			<article id="sinopse">
+				<h2 class="major">Sinopse</h2>
+				<span class="image main"><img src="images/padrao.jpg" alt="" /></span>
+				<p>O Museu dos Descobrimentos, é um espaço que reconstrói a fantástica odisseia dos navegadores
+					portugueses, que cruzaram oceanos à descoberta de um mundo desconhecido.
+					Lance-se à aventura que mudou o mundo, através desta experiência imersiva.</p>
+			</article>
+
+
+		</div>
+
+		<!-- Footer -->
+		<footer id="footer">
+			<p class="copyright">2023/2024</p>
+		</footer>
+
+	</div>
+
+	<div id="bg"></div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<script>
+		function iniciarMusica() {
+			// Abre a outra página com a música
+			window.open('mapa.html', '_blank');
+		}
+	</script>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var audioPlayer = document.getElementById('audioPlayer');
+
+			// Inicia a reprodução automática quando a página é carregada
+			audioPlayer.play();
+		});
+	</script>
+
+</body>
+
+</html>

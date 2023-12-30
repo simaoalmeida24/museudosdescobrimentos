@@ -1,0 +1,118 @@
+<html>
+
+<head>
+  <title>Exposição</title>
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <!-- ######## Componente de gestão de eventos ######## -->
+  <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+</head>
+
+<body>
+
+  <a-scene stats>
+
+    <a-assets>
+      <a-asset-item id="astrolabio" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/astrolabio.glb"></a-asset-item>
+      <a-asset-item id="bandeira" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bandeira.glb"></a-asset-item>
+      <a-asset-item id="bussola" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bussola.glb"></a-asset-item>
+      <a-asset-item id="mapa" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/mapa3.glb"></a-asset-item>
+      <a-asset-item id="quadro" src="https://link.storjshare.io/s/jwyadsa6jm3jl4d2sapevz3ml3bq/3d-bucket/quadroh.glb"></a-asset-item>
+      <img id="imgmapa" src="images/textomapa.webp">
+      <img id="imgastrolabio" src="images/textoastrolabio.webp">
+      <img id="imgbandeira" src="images/textovela.webp">
+      <img id="imgquadro" src="images/textoquadro.webp">
+      <img id="imgbussola" src="images/textobussula.webp">
+    </a-assets>
+
+    <!-- Mostrador - Mapa  -->
+    <a-entity light="type: spot; angle: 40; distance: 3.93; intensity: 2; penumbra: 1" rotation="-40 50 0"
+      position="-3.06716 3.05281 -2.51289" scale=""></a-entity>
+    <a-image id="azul" visible="false" event-set__resetvisibilidade="_event: click; visible: false" src="#imgmapa"
+      material="" geometry="" position="-3.75444 6.40137 -3.1227" scale="4.72985 4.72985 4.72985"
+      rotation="0 50.56467133588541 0"></a-image>
+    <a-gltf-model event-set__alteravisibilidade="_event: click; _target: #azul; visible: true" src="#mapa"
+      gltf-model="#mapa" position="-5.89352 -5.225 -0.95854" rotation="-75.55078782374548 -130.42639361019522 0"
+      scale="0.26933 0.26933 0.26933" class="raycastable menu-button"></a-gltf-model>
+    <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="1.89 0.27 1.01"
+      position="-4.1283 0.599 -3.36986" id="Pilar 05" rotation="0 -40.58145471352595 0"></a-box>
+    <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="2.11 0.02 1.1"
+      position="-4.12695 0.028 -3.36264" id="Suporte 05" rotation="0 -40.83584797456403 0"></a-box>
+
+    <!-- Mostrador - Astrolabio -->
+    <a-entity light="type: spot; angle: 40; distance: 3.93; intensity: 2; penumbra: 1"
+      rotation="-34.196986002383184 106.75636117775065 -42.0602587827586" position="-3.067 3.053 1.82242"
+      scale=""></a-entity>
+    <a-image id="amarelo" visible="false" event-set__resetvisibilidade="_event: click; visible: false"
+      src="#imgastrolabio" material="" geometry="" position="-4.700 6.40137 2.200" scale="4.72985 4.72985 4.72985"
+      rotation="0 110 0"></a-image>
+    <a-gltf-model event-set__alteravisibilidade="_event: click; _target: #amarelo; visible: true" src="#astrolabio"
+      gltf-model="#astrolabio" position="-4.89297 1.90835 2.41716" scale="0.34442 0.34442 0.34442"
+      rotation="72.72782476713591 116.08411408248045 0.07734930234266114"></a-gltf-model>
+    <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="1.89 0.27 1.01"
+      position="-4.71328 0.599 2.29551" id="Pilar 04" rotation="0 22.810595739748333 0"></a-box>
+    <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="2.11 0.02 1.1"
+      position="-4.70465 0.028 2.28614" id="Suporte 04" rotation="0 22.769342778498913 0"></a-box>
+
+    <!-- Mostrador - Bandeira -->
+    <a-entity light="type: spot; angle: 40; distance: 3.93; intensity: 2; penumbra: 1"
+      rotation="-10.459344550113178 -92.3625154484741 172.08214418959145" position="3.40601 3.07462 0.34308"
+      scale=""></a-entity>
+    <a-image id="branco" visible="false" event-set__resetvisibilidade="_event: click; visible: false" src="#imgbandeira"
+      material="" geometry="" position="5.187 6.40137 0.446" scale="4.72985 4.72985 4.72985"
+      rotation="0 -90 0"></a-image>
+    <a-gltf-model event-set__alteravisibilidade="_event: click; _target: #branco; visible: true" src="#bandeira"
+      gltf-model="#bandeira" scale="0.22714 0.22714 0.22714" position="2.8703 1.37383 -2.681"
+      rotation="0 -33.13644112359603 0"></a-gltf-model>
+    <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="1.89 0.27 1.01"
+      position="5.248 0.599 0.400" id="Pilar 03"></a-box>
+    <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="2.11 0.02 1.1"
+      position="5.248 0.028 0.400" id="Suporte 03"></a-box>
+
+    <!-- Mostrador - Quadro -->
+    <a-entity light="type: spot; angle: 40; distance: 3.93; intensity: 2; penumbra: 1"
+      rotation="-18.517995938628207 -162.90106848041515 169.57373496250875" position="0.49536 3.075 3.44091"
+      scale=""></a-entity>
+    <a-image id="castanho" visible="false" event-set__resetvisibilidade="_event: click; visible: false" src="#imgquadro"
+      material="" geometry="" position="1 6.40137 5.550" scale="4.72985 4.72985 4.72985" rotation="0 -166 0"></a-image>
+    <a-gltf-model event-set__alteravisibilidade="_event: click; _target: #castanho; visible: true" src="#quadro"
+      gltf-model="#quadro" position="-0.50335 0.13101 -1.43884" scale="0.23419 0.23419 0.23419"
+      rotation="0.004 12.77 1"></a-gltf-model>
+    <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="1.89 0.27 1.01"
+      position="0.94655 0.599 5.20557" id="Pilar 02" rotation="0 14.027725698187945 0.5712389217454309"></a-box>
+    <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="2.11 0.02 1.1"
+      position="0.96616 0.028 5.223" id="Suporte 02" rotation="0 14.201904867907716 0"></a-box>
+
+    <!-- Mostrador - Bussola -->
+    <a-entity light="type: spot; angle: 40; distance: 3.93; intensity: 2; penumbra: 1" rotation="-34.38 -26.597 176.578"
+      position="1.58489 2.60022 -3.57869" scale=""></a-entity>
+    <a-image id="verde" visible="false" event-set__resetvisibilidade="_event: click; visible: false" src="#imgbussola"
+      material="" geometry="" position="2.373 6.401 -5.147" rotation="0 -24.67958406746508 0" scale="4.729 4.729 4.729"
+      rotation="-28.6 -23.9 -0.8"></a-image>
+    <a-gltf-model event-set__alteravisibilidade="_event: click; _target: #verde; visible: true" src="#bussola"
+      gltf-model="#bussola" position="1.40862 0.42453 -6.39933" scale="0.53004 0.53004 0.53004"
+      rotation="39.06941909217571 -26.639099726812496 0"></a-gltf-model>
+    <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="1.89 0.27 1.01"
+      position="2.18748 0.599 -4.79223" id="Pilar 01" rotation="0 -25.80315430371662 0"></a-box>
+    <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="2.11 0.02 1.1"
+      position="2.18928 0.028 -4.79291" id="Suporte 01" rotation="0 -24.67958406746508 0"></a-box>
+
+    <!-- Chão -->
+    <a-entity light="type: spot; angle: 40; distance: 3.93; intensity: 2; penumbra: 1" rotation="-90 0 0"
+      position="0 2.78244 0" scale=""></a-entity>
+    <a-circle color="#490000" radius="20" material="" geometry="" rotation="-90 0 0" scale="0.3 0.3 0.3"
+      position="0 0.00481 0"></a-circle>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="50" height="50" color="#A5A1A1"></a-plane>
+    <a-sky color="#091B52"></a-sky>
+    <a-entity light="type: ambient; color: #CCC; intensity: 0.015"></a-entity>
+
+    <a-camera camera="" position="0 2.14027 0.505" rotation="1.031 187.472 0" look-controls="" wasd-controls=""
+      data-aframe-inspector-original-camera="">
+      <!-- Representação visual do Cursor -->
+      <a-entity cursor="" position="0 0 -1" geometry="primitive: sphere; radius: 0.005"
+        material="color: #000000; shader: flat; opacity: 0.5" raycaster="">
+      </a-entity>
+    </a-camera>
+  </a-scene>
+</body>
+
+</html>
