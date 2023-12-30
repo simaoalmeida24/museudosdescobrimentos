@@ -12,11 +12,14 @@
   <a-scene stats>
 
     <a-assets>
-      <a-asset-item id="astrolabio" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/astrolabio.glb"></a-asset-item>
-      <a-asset-item id="bandeira" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bandeira.glb"></a-asset-item>
-      <a-asset-item id="bussola" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bussola.glb"></a-asset-item>
+      <a-asset-item id="astrolabio"
+        src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/astrolabio.glb"></a-asset-item>
+      <a-asset-item id="bandeira"
+        src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bandeira.glb"></a-asset-item>
+      <a-asset-item id="bussola"
+        src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bussola.glb"></a-asset-item>
       <a-asset-item id="mapa" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/mapa3.glb"></a-asset-item>
-      <a-asset-item id="quadro" src="images/quadro2.glb"></a-asset-item>
+      <a-asset-item id="quadro" src="images/quadro3.glb"></a-asset-item>
       <img id="imgmapa" src="images/textomapa.webp">
       <img id="imgastrolabio" src="images/textoastrolabio.webp">
       <img id="imgbandeira" src="images/textovela.webp">
@@ -69,14 +72,14 @@
       position="5.248 0.028 0.400" id="Suporte 03"></a-box>
 
     <!-- Mostrador - Quadro -->
+    <a-gltf-model event-set__alteravisibilidade="_event: click; _target: #castanho; visible: true" src="#quadro"
+      gltf-model="images/quadro3.glb" position="-1.134 0.392 -1.216" scale="0.23419 0.23419 0.23419"
+      rotation="0.004 12.77 1"></a-gltf-model>
     <a-entity light="type: spot; angle: 40; distance: 3.93; intensity: 2; penumbra: 1"
       rotation="-18.517995938628207 -162.90106848041515 169.57373496250875" position="0.49536 3.075 3.44091"
       scale=""></a-entity>
     <a-image id="castanho" visible="false" event-set__resetvisibilidade="_event: click; visible: false" src="#imgquadro"
       material="" geometry="" position="1 6.40137 5.550" scale="4.72985 4.72985 4.72985" rotation="0 -166 0"></a-image>
-    <a-gltf-model event-set__alteravisibilidade="_event: click; _target: #castanho; visible: true" src="#quadro"
-      gltf-model="#quadro" position="-0.50335 0.13101 -1.43884" scale="0.23419 0.23419 0.23419"
-      rotation="0.004 12.77 1"></a-gltf-model>
     <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="1.89 0.27 1.01"
       position="0.94655 0.599 5.20557" id="Pilar 02" rotation="0 14.027725698187945 0.5712389217454309"></a-box>
     <a-box color="white" depth="1" height="4" width="0.5" material="" geometry="" scale="2.11 0.02 1.1"

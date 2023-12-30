@@ -45,14 +45,19 @@
   <a-scene stats>
     <a-assets>
       <!-- Adicionei um novo asset para a próxima sala -->
-      <a-asset-item id="astrolabio" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/astrolabio.glb"></a-asset-item>
-      <a-asset-item id="bandeira" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bandeira.glb"></a-asset-item>
-      <a-asset-item id="bussola" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bussola.glb"></a-asset-item>
+      <a-asset-item id="astrolabio"
+        src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/astrolabio.glb"></a-asset-item>
+      <a-asset-item id="bandeira"
+        src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bandeira.glb"></a-asset-item>
+      <a-asset-item id="bussola"
+        src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/bussola.glb"></a-asset-item>
       <a-asset-item id="mapa" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/mapa3.glb"></a-asset-item>
-      <a-asset-item id="quadro" src="https://link.storjshare.io/s/jwyadsa6jm3jl4d2sapevz3ml3bq/3d-bucket/quadroh.glb"></a-asset-item>
+      <a-asset-item id="quadro" src="images/quadro3.glb"></a-asset-item>
       <a-asset-item id="cofre" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/cofre6.glb"></a-asset-item>
-      <a-asset-item id="nau" src="https://link.storjshare.io/raw/jvpanm63reqxylhqft5cmop2nmyq/3d-bucket/NAU7.glb"></a-asset-item>
-      <a-asset-item id="candeeiro" src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/lanternaanimada.glb"></a-asset-item>
+      <a-asset-item id="nau"
+        src="https://link.storjshare.io/raw/jvpanm63reqxylhqft5cmop2nmyq/3d-bucket/NAU7.glb"></a-asset-item>
+      <a-asset-item id="candeeiro"
+        src="https://raw.githubusercontent.com/JoaoAz/upload_bd/main/lanternaanimada.glb"></a-asset-item>
     </a-assets>
 
     <!-- Using the asset management system. -->
@@ -66,7 +71,7 @@
     <a-gltf-model class="objetoClicavel" src="#mapa"
       event-set__ResetVisibilidade="_event: click; visible: false"></a-gltf-model>
     <a-gltf-model class="objetoClicavel" src="#quadro"
-      event-set__ResetVisibilidade="_event: click; visible: false"></a-gltf-model>
+      event-set__ResetVisibilidade="_event: click; visible: false" position="-2.39387 0.85802 0.56785"></a-gltf-model>
     <a-gltf-model src="#cofre"></a-gltf-model>
     <a-gltf-model src="#nau"></a-gltf-model>
     <a-entity gltf-model="#candeeiro" position="53.25544 2.33364 9.46375" animation-mixer></a-entity>
